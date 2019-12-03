@@ -18,3 +18,4 @@ Rails.application.routes.draw do
   post '/shelters/:shelter_id/pets', to: 'pets#create'
   get '/shelters/:shelter_id/pets', to: 'pets#index'
 end
+# yarn installed
