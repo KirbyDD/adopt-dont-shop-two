@@ -1,0 +1,40 @@
+<% if @shelter %>
+<header>
+  <h1>Shelter Pets</h1>
+  <p>Number of Pets in this Shelter: <%= @pets.count_of_pets %>
+  <p><%= button_to 'Add New Pet', "/shelters/#{@shelter.id}/pets/new", method: :get %></p>
+</header>
+
+<section>
+      <% @pets.each do |pet| %>
+      <p><img src= <%= pet.image %> width="200" height="162"></p>
+      <p>name: <%= link_to "#{pet.name}", "/pets/#{pet.id}" %></p>
+      <p>approximate_age: <%= pet.approximate_age %></p>
+      <p>sex: <%= pet.sex %></p>
+      <p>Shelter Name: <%= pet.shelter.name %>
+      <p>Adoptable: <%= pet.adoptable = "Currently Adoptable" %></p>
+      <p><%= link_to 'Edit', "/pets/#{pet.id}/edit" %> |
+         <%= link_to 'Delete', "/pets/#{pet.id}", method: :delete %></p>
+      <% end %>
+</section>
+
+<% else %>
+<header>
+  <h1>All Pets</h1>
+  <p>Number of Pets: <%= @pets.count_of_pets %>
+</header>
+
+
+<section>
+      <% @pets.each do |pet| %>
+      <p><img src= <%= pet.image %> width="200" height="162"></p>
+      <p>name: <%= link_to "#{pet.name}", "/pets/#{pet.id}" %></p>
+      <p>approximate_age: <%= pet.approximate_age %></p>
+      <p>sex: <%= pet.sex %></p>
+      <p>Adoptable: <%= pet.adoptable = "Currently Adoptable" %></p>
+      <p><%= link_to 'Edit', "/pets/#{pet.id}/edit" %> |
+      <%= link_to 'Delete', "/pets/#{pet.id}", method: :delete %></P
+      <% end %>
+</section>
+
+<% end %>

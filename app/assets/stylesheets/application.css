@@ -1,0 +1,75 @@
+#banner{
+  display: block;
+  background-color: darkblue;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  height: 100%;
+  position: relative;
+}
+
+header{
+  background-color: white;
+  vertical-align: middle;
+  text-align: center;
+  color: black;
+  position: top;
+  top: 1px;
+}
+
+nav {
+  display: block;
+  background-color: yellow;
+  text-align: right;
+  position: relative;
+  bottom: 1px;
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  background-color: yellow;
+}
+
+#shelterName {
+  text-align: center
+}
+
+
+div {
+  background: #ddd;
+  padding: 1em;
+  display: grid;
+  align-content: center;
+  text-align: center;
+}
+
+div:nth-of-type(odd) {
+  background: #eee;
+}
+
+.editanddeleteButtons {
+  text-align: middle;
+}
+
+#sheltersAddress {
+  hieght: 100%;
+  position: top;
+  top: 10px;
+}
+
+section {
+  text-align: center;
+  border-top: inset;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <h2><%= @shelter.name %></h2>
+  </header>
+
+  <div id="sheltersAddress">
+    <p><%= @shelter.address %></p>
+    <p><%= @shelter.city %>
+       <%= @shelter.state %>
+       <%= @shelter.zip %></p>
+    <p><%= link_to 'Edit', "/shelters/#{@shelter.id}/edit" %> | 
+       <%= link_to 'Delete', "/shelters/#{@shelter.id}" %></p>
+    <p><%= button_to 'Shelters Pets', "/shelters/#{@shelter.id}/pets", method: :show %></p>
+  </div>
+
+
+
+
+
+
+</html>
