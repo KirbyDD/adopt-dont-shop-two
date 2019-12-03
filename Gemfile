@@ -28,5 +28,5 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
 end
 
-ruby '2.6.5'
+ruby '2.5.3'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
