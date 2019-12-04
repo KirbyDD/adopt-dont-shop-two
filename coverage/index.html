@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-12-04T13:45:26-07:00">2019-12-04T13:45:26-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-12-04T15:25:41-07:00">2019-12-04T15:25:41-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">96.51%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.08
+         1.12
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>36</b> files in total.
-    <b>373</b> relevant lines. 
-    <span class="green"><b>360</b> lines covered</span> and
-    <span class="red"><b>13</b> lines missed </span>
+    <b>383</b> relevant lines. 
+    <span class="green"><b>383</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -73,11 +73,11 @@
       <tr>
         <td class="strong"><a href="#ee837f8deaf35e3ecc663a040076b9cb0a0e15fd" class="src_link" title="app/controllers/reviews_controller.rb">app/controllers/reviews_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>31</td>
         <td>19</td>
-        <td>11</td>
-        <td>11</td>
+        <td>19</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -87,7 +87,7 @@
         <td>24</td>
         <td>24</td>
         <td>0</td>
-        <td>1.4</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
@@ -263,9 +263,9 @@
       <tr>
         <td class="strong"><a href="#be2b053bb3c804036eb4ef6d01161d231860ff25" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>25</td>
         <td>23</td>
-        <td>21</td>
-        <td>21</td>
+        <td>23</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -312,12 +312,12 @@
       
       <tr>
         <td class="strong"><a href="#8c971b124c962380c372c7985f9b20d417d4d495" class="src_link" title="spec/features/reviews/edit_spec.rb">spec/features/reviews/edit_spec.rb</a></td>
-        <td class="red strong">23.53 %</td>
+        <td class="green strong">100.0 %</td>
         <td>31</td>
         <td>17</td>
-        <td>4</td>
-        <td>13</td>
-        <td>0.2</td>
+        <td>17</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -781,8 +781,8 @@
     <h3>app/controllers/reviews_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>19</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -877,19 +877,19 @@
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">  def edit</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">  def review_params</code>
+          <code class="ruby">    @shelter = Shelter.find(params[:shelter_id])</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">    params.permit(:title, :rating, :content)</code>
+          <code class="ruby">    @review = Review.find(params[:id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
@@ -899,6 +899,78 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def update </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    review = Review.find(params[:id])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    review.update(review_params)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    review.save</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    redirect_to &quot;/shelters/#{review.shelter_id}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def review_params</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="29">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    params.permit(:title, :rating, :content)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">end</code>
@@ -965,8 +1037,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="8">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="8">
+          <span class="hits">5</span>
           
           <code class="ruby">    @shelter = Shelter.find(params[:id])</code>
         </li>
@@ -2594,8 +2666,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>21</b> relevant lines. 
-      <span class="green"><b>21</b> lines covered</span> and
+      <b>23</b> relevant lines. 
+      <span class="green"><b>23</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2729,13 +2801,25 @@
           <code class="ruby">  post &#39;/shelters/:shelter_id/reviews&#39;, to: &#39;reviews#create&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  get &#39;/shelters/:shelter_id/reviews/:id/edit&#39;, to: &#39;reviews#edit&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  patch &#39;/shelters/:shelter_id/reviews/:id&#39;, to: &#39;reviews#update&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby"># yarn installed</code>
@@ -3905,11 +3989,11 @@
         <div class="source_table" id="8c971b124c962380c372c7985f9b20d417d4d495">
   <div class="header">
     <h3>spec/features/reviews/edit_spec.rb</h3>
-    <h4><span class="red">23.53 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>17</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>13</b> lines missed.</span>
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -3943,13 +4027,13 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">        xit &#39;I can update a pets information&#39; do</code>
+          <code class="ruby">        it &#39;I can update a pets information&#39; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">            new_shelter = Shelter.create(name: &#39;PetsMart&#39;, </code>
+          <code class="ruby">            new_shelter = Shelter.create!(name: &#39;PetsMart&#39;, </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
@@ -3976,10 +4060,10 @@
           <code class="ruby">                                          zip: 90120)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">            new_review = @new_shelter.reviews.create(title: &quot;Awesome!&quot;, rating: 5, content: &quot;This place gave me my best friend.&quot;)</code>
+          <code class="ruby">            new_review = new_shelter.reviews.create!(title: &quot;Awesome!&quot;, rating: 5, content: &quot;This place gave me my best friend.&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -3988,8 +4072,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
           <code class="ruby">            visit &quot;/shelters/#{new_shelter.id}&quot;</code>
         </li>
@@ -4000,10 +4084,10 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">            click_link &#39;Edit&#39;</code>
+          <code class="ruby">            click_link &#39;Edit This Review&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -4012,10 +4096,10 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">            expect(current_path).to eq(&quot;/shelters/#{new_review.id}/edit&quot;)</code>
+          <code class="ruby">            expect(current_path).to eq(&quot;/shelters/#{new_shelter.id}/reviews/#{new_review.id}/edit&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
@@ -4024,20 +4108,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
           <code class="ruby">            fill_in :title, with: &#39;PetsCo&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
           <code class="ruby">            fill_in :rating, with: 2</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
           
           <code class="ruby">            fill_in :content, with: &quot;Nevermind&quot;</code>
         </li>
@@ -4048,10 +4132,10 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">            click_on &#39;Update Pet Info.&#39;</code>
+          <code class="ruby">            click_on &#39;Update Review.&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
@@ -4060,26 +4144,26 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">            expect(current_path).to eq(&quot;/shelters/#{new_review.id}&quot;)</code>
+          <code class="ruby">            expect(current_path).to eq(&quot;/shelters/#{new_shelter.id}&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="26">
-          
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
           
           <code class="ruby">            expect(page).to have_content(&#39;PetsCo&#39;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
-          
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
           
           <code class="ruby">            expect(page).to have_content(2)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="28">
-          
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
           
           <code class="ruby">            expect(page).to have_content(&quot;Nevermind&quot;)</code>
         </li>
