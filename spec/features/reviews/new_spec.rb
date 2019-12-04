@@ -16,9 +16,9 @@ RSpec.describe "Creating a new review" do
     title = "Good!"
     rating = 5
     content = "This shelter was Good!"
-    optional_picture = "https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg")
+    optional_picture = "https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg"
 
-    visit "/shelters/#{shelter.id}/reviews/new"
+    visit "/shelters/#{@new_shelter.id}/reviews/new"
 
     fill_in :title, with: title
     fill_in :rating, with: rating
@@ -27,7 +27,7 @@ RSpec.describe "Creating a new review" do
 
     click_on "Add New Review"
 
-    expect(current_path).to eq("/shelters/#{shelter.id}")
+    expect(current_path).to eq("/shelters/#{@new_shelter.id}")
     expect(page).to have_content(title)
     expect(page).to have_content(rating)
     expect(page).to have_content(content)

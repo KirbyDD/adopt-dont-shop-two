@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
     review = shelter.reviews.create(review_params)
     review.save
 
-    redirect_to "/shelters/#{shleter.id}"
+    redirect_to "/shelters/#{shelter.id}"
   end
 
   private
