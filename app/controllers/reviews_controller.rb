@@ -18,10 +18,17 @@ class ReviewsController < ApplicationController
   end
 
   def update 
+    shelter = Shelter.find(params[:shelter_id])
     review = Review.find(params[:id])
     review.update(review_params)
-    review.save
+    
+    if review.save
+      flash[:success] = 'Update Complete'
     redirect_to "/shelters/#{review.shelter_id}"
+    else 
+      flash[:notice] = 'Review not updated: Required information missing.'
+      redirect_to "/shelters/#{shelter.id}/reviews/#{review.id}/edit"
+    end
   end
 
   private
