@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/config/environment.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/config/application.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/config/application.rb": [
         1,
         null,
         1,
@@ -41,12 +41,12 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/config/boot.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/config/environments/test.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/config/environments/test.rb": [
         1,
         null,
         null,
@@ -90,7 +90,7 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/config/initializers/application_controller_renderer.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -100,7 +100,7 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/config/initializers/assets.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -116,7 +116,7 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/config/initializers/backtrace_silencers.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -125,20 +125,20 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/config/initializers/cookies_serializer.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/config/initializers/cookies_serializer.rb": [
         null,
-        null,
-        null,
-        null,
-        1
-      ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/config/initializers/inflections.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -156,13 +156,13 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/config/initializers/mime_types.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/config/initializers/wrap_parameters.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -178,7 +178,7 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/config/routes.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/config/routes.rb": [
         1,
         1,
         1,
@@ -198,60 +198,61 @@
         1,
         1,
         1,
-        null
-      ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/spec/features/pets/edit_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/spec/features/pets/index_spec.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/spec/features/pets/edit_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/spec/features/pets/index_spec.rb": [
         1,
         null,
         1,
@@ -305,7 +306,7 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/spec/features/pets/new_spec.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/spec/features/pets/new_spec.rb": [
         1,
         null,
         1,
@@ -346,7 +347,7 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/spec/features/pets/show_spec.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/spec/features/pets/show_spec.rb": [
         1,
         null,
         1,
@@ -391,7 +392,7 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/spec/features/shelters/create_spec.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/spec/features/shelters/create_spec.rb": [
         1,
         null,
         1,
@@ -420,7 +421,7 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/spec/features/shelters/delete_spec.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/spec/features/shelters/delete_spec.rb": [
         1,
         null,
         1,
@@ -446,7 +447,7 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/spec/features/shelters/edit_spec.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/spec/features/shelters/edit_spec.rb": [
         1,
         null,
         1,
@@ -480,7 +481,7 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/spec/features/shelters/index_spec.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/spec/features/shelters/index_spec.rb": [
         1,
         null,
         1,
@@ -509,7 +510,35 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/spec/features/shelters/show_spec.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/spec/features/shelters/show_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        2,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
         1,
         null,
         1,
@@ -517,12 +546,6 @@
         1,
         1,
         null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
         1,
         1,
         1,
@@ -530,7 +553,7 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/spec/models/pet_spec.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/spec/models/pet_spec.rb": [
         1,
         null,
         1,
@@ -548,7 +571,7 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/app/models/pet.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/app/models/pet.rb": [
         1,
         1,
         1,
@@ -560,12 +583,38 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/app/models/application_record.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/spec/models/shelter_spec.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/spec/models/review_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/app/models/review.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/spec/models/shelter_spec.rb": [
         1,
         null,
         1,
@@ -578,14 +627,15 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/app/models/shelter.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/app/models/shelter.rb": [
         1,
         1,
         null,
         1,
+        1,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/app/controllers/pets_controller.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/app/controllers/pets_controller.rb": [
         1,
         null,
         1,
@@ -636,31 +686,25 @@
         null,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/app/controllers/application_controller.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/app/controllers/shelters_controller.rb": [
+      "/Users/thunderwolf/turing/mod2/projects/adopt_dont_shop_two/app/controllers/shelters_controller.rb": [
         1,
         null,
         1,
-        8,
+        7,
         null,
         null,
         1,
-        0,
+        2,
         null,
         null,
         1,
         null,
         null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
         1,
         1,
         null,
@@ -671,12 +715,24 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null,
         1,
         1,
         1,
         1,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         1,
@@ -687,7 +743,7 @@
         null
       ]
     },
-    "timestamp": 1575341579
+    "timestamp": 1575421095
   },
   "Unknown Test Framework": {
     "coverage": {
