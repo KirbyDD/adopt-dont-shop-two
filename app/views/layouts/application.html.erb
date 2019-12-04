@@ -11,6 +11,7 @@
   <header id="banner">
     <h1>Adopt Don't Shop</h1>
   </header>
+
   <nav>
     <ul>
       <li><%= link_to 'Pets', '/pets' %></li>
@@ -18,7 +19,11 @@
     </ul>
   </nav>
 
+
   <body>
+    <% flash.each do |type, message| %>
+      <p><%= message %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
