@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'As a Visitor', type: :feature do
+RSpec.describe 'As a visitor', type: :feature do
   describe 'I visit a shelter show page' do
     before(:each) do
       @new_shelter = Shelter.create(name: 'Denver Dumb Friends League',
