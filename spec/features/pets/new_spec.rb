@@ -19,7 +19,7 @@ RSpec.describe "creating a new pet" do
 
     visit "/shelters/#{shelter.id}/pets/new"
 
-    fill_in "Image", with: image
+    fill_in :image, with: image
     fill_in :name, with: name
     fill_in :approximate_age, with: approximate_age
     fill_in :sex, with: sex

@@ -15,6 +15,7 @@
   </div>
 
   <h3>Reviews</h3>
+  <p><%= button_to 'Add Review', "/shelters/#{@shelter.id}/reviews/new", method: :get %></p>
     <% @shelter.reviews.each do |review| %>
       <p><%= review.title%></p>
       <p><%= review.rating%></p>

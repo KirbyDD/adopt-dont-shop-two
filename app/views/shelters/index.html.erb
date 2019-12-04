@@ -15,7 +15,7 @@
           <%= shelter.city %>
           <%= shelter.state %>
           <%= shelter.zip %></h3>
-      <h5 class="editanddeleteButtons"><%= link_to 'Edit', "/shelters/#{shelter.id}/edit" %> |
+      <h5 class="edit Buttons"><%= link_to 'Edit', "/shelters/#{shelter.id}/edit" %> |
       <%= link_to 'Delete', "/shelters/#{shelter.id}", method: :delete %></h5>
       <%end%>
     </div>
