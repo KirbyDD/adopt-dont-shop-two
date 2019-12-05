@@ -19,13 +19,13 @@ RSpec.describe 'As a visitor' do
     click_link 'Pets'
 
     expect(current_path).to eq('/pets')
-    #
+
     # visit '/pets'
-    #
+
     # expect(current_path).to eq('/pets')
-    #
-    # click_on 'Favorites'
-    #
+		#
+    # click_link 'Favorites'
+
     # expect(current_path).to eq('/favorites')
     end
   end

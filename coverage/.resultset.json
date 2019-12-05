@@ -203,11 +203,46 @@
         1,
         1,
         1,
+        1,
         null,
         null
       ],
       "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/spec/features/nav/nav_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/spec/features/pets/delete_spec.rb": [
@@ -751,7 +786,7 @@
         1,
         null,
         1,
-        8,
+        10,
         null,
         null
       ],
@@ -812,11 +847,11 @@
         1,
         null,
         1,
-        8,
+        10,
         2,
         2,
         null,
-        6,
+        8,
         null,
         null,
         null,
@@ -862,6 +897,16 @@
       "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/app/controllers/application_controller.rb": [
         1,
         1,
+        null
+      ],
+      "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/app/controllers/favorites_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/app/controllers/shelters_controller.rb": [
@@ -961,7 +1006,7 @@
         null
       ]
     },
-    "timestamp": 1575572415
+    "timestamp": 1575579474
   },
   "Unknown Test Framework": {
     "coverage": {
