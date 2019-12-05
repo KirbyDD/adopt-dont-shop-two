@@ -1,54 +1,83 @@
-#banner{
-  display: block;
-  background-color: darkblue;
-  vertical-align: middle;
-  text-align: center;
-  color: white;
-  height: 100%;
-  position: relative;
+body {
+  margin: 0px;
 }
 
-header{
-  background-color: white;
+h1 {
+  color: gold;
+  text-shadow: 8px 8px 7px black;
+}
+
+a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+p {
+  color: white;
+}
+
+#banner{
+  background-color: royalblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+header {
+  /* background-color: white; */
   vertical-align: middle;
   text-align: center;
-  color: black;
   position: top;
   top: 1px;
 }
 
+.banner-title {
+  color: gold;
+  font-size: 52px;
+  text-shadow: 8px 8px 7px black;
+}
+
 nav {
-  display: block;
-  background-color: yellow;
-  text-align: right;
-  position: relative;
+  display: flex;
+  justify-content: space-around;
   bottom: 1px;
   width: 100%;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.nav-btn {
+  background-color: royalblue;
+  border-width: 2px;
+  border-color: black;
+  box-shadow: 8px 8px 7px gold;
+  height: 55px;
+  margin: 15px;
+  width: 130px;
+
 }
 
-li {
-  float: right;
-}
-
-li a {
-  display: block;
-  padding: 8px;
-  background-color: yellow;
+.nav-btn a {
+  text-decoration: none;
+  color: gold;
+  font-size: 26px;
 }
 
 #shelterName {
   text-align: center
 }
 
+.background-img {
+  position: fixed;
+  filter: brightness(40%);
+  z-index: -1;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
 
 div {
-  background: #ddd;
+  /* background: #ddd; */
   padding: 1em;
   display: grid;
   align-content: center;
@@ -56,7 +85,7 @@ div {
 }
 
 div:nth-of-type(odd) {
-  background: #eee;
+  /* background: #eee; */
 }
 
 .editanddeleteButtons {
