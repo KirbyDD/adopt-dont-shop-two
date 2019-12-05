@@ -786,7 +786,7 @@
         1,
         null,
         1,
-        10,
+        14,
         null,
         null
       ],
@@ -847,11 +847,11 @@
         1,
         null,
         1,
-        10,
+        14,
         2,
         2,
         null,
-        8,
+        12,
         null,
         null,
         null,
@@ -903,9 +903,18 @@
         1,
         null,
         1,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        null,
         1,
         1,
-        1,
+        null,
         null,
         null
       ],
@@ -1006,7 +1015,7 @@
         null
       ]
     },
-    "timestamp": 1575579474
+    "timestamp": 1575582541
   },
   "Unknown Test Framework": {
     "coverage": {
