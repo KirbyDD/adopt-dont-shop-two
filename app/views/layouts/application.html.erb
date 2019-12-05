@@ -8,22 +8,19 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <header id="banner">
-    <h1>Adopt Don't Shop</h1>
-  </header>
-
-  <nav>
-    <ul>
-      <li><%= link_to 'Pets', '/pets' %></li>
-      <li><%= link_to 'Shelters', "/shelters" %></li>
-    </ul>
-  </nav>
-
-
   <body>
+    <header id="banner">
+      <h1 class='banner-title'>Adopt Don't Shop</h1>
+      <nav>
+        <button class='nav-btn'><%= link_to 'Pets', '/pets' %></button>
+        <button class='nav-btn'><%= link_to 'Shelters', "/shelters" %></button>
+      </nav>
+    </header>
+    <img class='background-img' src='https://pethavenmn.org/wp-content/uploads/2017/08/5a898cc6f6567557b5376222cfa764d593fd7cbb.jpg' alt='Collection of dogs' />
     <% flash.each do |type, message| %>
       <p><%= message %></p>
     <% end %>
+
     <%= yield %>
   </body>
 </html>
