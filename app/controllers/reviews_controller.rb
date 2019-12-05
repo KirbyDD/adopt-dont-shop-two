@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
 
   def create
     shelter = Shelter.find(params[:shelter_id])
-    review = shelter.reviews.create(review_params)
+    review = shelter.reviews.new(review_params)
 
     if review.save
       flash[:success] = 'Update Complete'
@@ -32,7 +32,6 @@ class ReviewsController < ApplicationController
     shelter = Shelter.find(params[:shelter_id])
     review = Review.find(params[:id])
     review.update(review_params)
-
     if review.save
       flash[:success] = 'Update Complete'
     redirect_to "/shelters/#{review.shelter_id}"
