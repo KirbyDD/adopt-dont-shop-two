@@ -29,7 +29,7 @@ RSpec.describe 'When a user adds pet to their favorites' do
 
 		within("#pet-#{@new_pet.id}") do
 
-			click_button 'Add Pet'
+			click_button 'Favorite'
 		end
 
 		expect(page).to have_content("You have added #{@new_pet.name} to your favorites.")
@@ -40,20 +40,20 @@ RSpec.describe 'When a user adds pet to their favorites' do
 
 		within("#pet-#{@new_pet.id}") do
 
-			click_button 'Add Pet'
+			click_button 'Favorite'
 		end
 
 		within("#pet-#{@new_pet_2.id}") do
 
-			click_button 'Add Pet'
+			click_button 'Favorite'
 		end
 
 		within("#pet-#{@new_pet.id}") do
 
-			click_button 'Add Pet'
+			click_button 'Favorite'
 		end
 
 		expect(page).to have_content("You have already added #{@new_pet.name} in your favorites.")
-		
+
 	end
 end
