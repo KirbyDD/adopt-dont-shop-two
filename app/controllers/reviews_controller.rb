@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
 
   def create
     shelter = Shelter.find(params[:shelter_id])
-    review = shelter.reviews.new(review_params)
+    review = shelter.reviews.create(review_params)
 
     if review.save
       flash[:success] = 'Update Complete'
