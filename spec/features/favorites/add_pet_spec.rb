@@ -54,6 +54,6 @@ RSpec.describe 'When a user adds pet to their favorites' do
 		end
 
 		expect(page).to have_content("You have already added #{@new_pet.name} in your favorites.")
-		
+
 	end
 end
