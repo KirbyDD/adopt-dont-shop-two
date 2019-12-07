@@ -14,4 +14,12 @@ class FavoritesController < ApplicationController
 			redirect_to "/pets"
 		end
 	end
+
+	def index
+		@favorites = []
+		ids = session[:favorites].keys
+		ids.each do |id|
+			@favorites << Pet.find(id)
+		end
+	end
 end

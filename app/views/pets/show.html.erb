@@ -1,4 +1,4 @@
-<img src= <%= @pet.image %> width="200" height="162">
+<img src= <%= @pet.image %> width="200" height="162" />
     <p>Hello My name is
       <%= @pet.name %></p>
     <p>Here is a little more about me:
@@ -10,4 +10,4 @@
     <p>And the answer to "if I am adoptable" is
       <%= @pet.adoptable %>! Can I come home with you?</p>
     <p><%= link_to 'Edit', "/pets/#{@pet.id}/edit" %> |
-       <%= link_to 'Delete', "/pets/#{@pet.id}"%></p>
+       <%= link_to 'Delete', "/pets/#{@pet.id}", method: :delete %></p>
