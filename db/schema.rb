@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20191207180932) do
     t.string "title"
     t.integer "rating"
     t.string "content"
-    t.string "optional_picture", default: "https://image.shutterstock.com/image-vector/cute-smiling-welsh-corgi-dog-260nw-1014458902.jpg"
+    t.string "optional_picture"
     t.bigint "shelter_id"
     t.index ["shelter_id"], name: "index_reviews_on_shelter_id"
   end
