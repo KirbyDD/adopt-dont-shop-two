@@ -17,7 +17,7 @@ class FavoritesController < ApplicationController
 
 	def index
 		@favorites = []
-		ids = session[:favorites].keys
+	    ids = session[:favorites].keys
 		ids.each do |id|
 			@favorites << Pet.find(id)
 		end

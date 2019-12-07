@@ -2,6 +2,7 @@
 <% if @favorites.count > 0 %>
 
 <main>
+  <%= button_to 'Apply for Pets', '/applications/new', method: :get %>
   <%= button_to 'Remove All Pets', '/favorites', method: :delete %>
   <% @favorites.each do |fav| %>
    <section id="pet-<%= fav.id %>">
