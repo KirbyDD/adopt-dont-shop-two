@@ -27,4 +27,9 @@ class FavoritesController < ApplicationController
 		session[:favorites].delete(params[:id].to_s)
 		redirect_to "/favorites"
 	end
+
+	def destroy_all
+		session[:favorites] = Hash.new(0) 
+		redirect_to "/favorites"
+	end
 end

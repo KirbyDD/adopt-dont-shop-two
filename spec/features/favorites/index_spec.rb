@@ -38,6 +38,7 @@ RSpec.describe "As a Visitor" do
     expect(page).to have_css("img[src*='#{twitch.image}']")
     expect(page).to have_content(jona.name)
     expect(page).to have_css("img[src*='#{jona.image}']")
+    expect(page).to have_content("List of Favorited Animals")
 
     click_link "#{twitch.name}"
 
