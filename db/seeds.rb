@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #
+Pet.destroy_all
+Shelter.destroy_all
 #
 # Shelters
 adams_county = Shelter.create(name: "Adams County", address: "1234 Colorado blvd.", city: "Denver", state: "Colorado", zip: 80230)
