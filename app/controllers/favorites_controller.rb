@@ -22,4 +22,9 @@ class FavoritesController < ApplicationController
 			@favorites << Pet.find(id)
 		end
 	end
+
+	def destroy
+		session[:favorites].delete(params[:id].to_s)
+		redirect_to "/favorites"
+	end
 end
