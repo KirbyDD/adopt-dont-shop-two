@@ -1,4 +1,8 @@
+<h2>List of Favorited Animals</h2>
+<% if @favorites.count > 0 %>
+
 <main>
+  <%= button_to 'Remove All Pets', '/favorites', method: :delete %>
   <% @favorites.each do |fav| %>
    <section id="pet-<%= fav.id %>">
       <%= button_to  'Unfavorite Pet', "/favorites/#{fav.id}", method: :delete %>
@@ -7,3 +11,9 @@
     </section>
   <% end %>
 </main>
+
+<% else %>
+
+<h2>You do not have any favorites. Please go to a shelter and add pets to your favorites.</h2>
+
+<% end %>
