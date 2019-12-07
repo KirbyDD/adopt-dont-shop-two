@@ -1,8 +1,9 @@
 <main>
-  <section>
-    <% @favorites.each do |fav| %>
+  <% @favorites.each do |fav| %>
+   <section id="pet-<%= fav.id %>">
+      <%= button_to  'Unfavorite Pet', "/favorites/#{fav.id}", method: :delete %>
       <h3><%= link_to "#{fav.name}", "/pets/#{fav.id}" %></h3>
       <img src= <%= fav.image %> width="200" height="162">
-    <% end %>
-  </section>
+    </section>
+  <% end %>
 </main>
