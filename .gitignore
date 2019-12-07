@@ -8,11 +8,11 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
+coverage
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-coverage
 
 /node_modules
 /yarn-error.log
