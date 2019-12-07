@@ -7,7 +7,7 @@ RSpec.describe "The application index page" do
 																							   city: "Denver",
 																							 	 state: "Colorado",
 																							 	 zip: 80230,
-																							 	 phone_number: 123 456 7890,
+																							 	 phone_number: 1234567890,
 																							 	 why_would_you_make_a_good_pet_owner: "Because why not"
 																							 )
 
@@ -16,7 +16,7 @@ RSpec.describe "The application index page" do
 																							   city: "Denver",
 																							 	 state: "Colorado",
 																							 	 zip: 80230,
-																							 	 phone_number: 123 456 7890,
+																							 	 phone_number: 1234567890,
 																							 	 why_would_you_make_a_good_pet_owner: "Because why not"
 																							 )
 
@@ -25,7 +25,7 @@ RSpec.describe "The application index page" do
 																							   city: "Denver",
 																							 	 state: "Colorado",
 																							 	 zip: 80230,
-																							 	 phone_number: 123 456 7890,
+																							 	 phone_number: 1234567890,
 																							 	 why_would_you_make_a_good_pet_owner: "Because why not"
 																							 )
 
@@ -87,12 +87,8 @@ RSpec.describe "The application index page" do
 		within("#application-#{@sebastian.id}") do
 			expect(page).to have_content(@sebastian.name)
 
-			within("#pet-#{@ciri.id}") do
-				edxpect(page).to have_content(@ciri.name)
-			end
-
-			within("#pet-#{@ozzy.id}") do
-				expect(page).to have_content(@ozzy.name)
+			within("#pet-#{@jona.id}") do
+				expect(page).to have_content(@jona.name)
 			end
 
 			within("#pet-#{@jona.id}") do
