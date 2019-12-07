@@ -879,10 +879,12 @@
         1,
         1,
         2,
+        2,
         null,
         null
       ],
       "/Users/sebastiansloan/turing/2mod/projects/adopt_dont_shop_two/app/models/application.rb": [
+        1,
         1,
         1,
         null
@@ -1182,6 +1184,6 @@
         null
       ]
     },
-    "timestamp": 1575742334
+    "timestamp": 1575742719
   }
 }
