@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20191207180932) do
     t.string "city"
     t.string "state"
     t.integer "zip"
-    t.integer "phone_number"
+    t.string "phone_number"
     t.text "why_would_you_make_a_good_pet_owner"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

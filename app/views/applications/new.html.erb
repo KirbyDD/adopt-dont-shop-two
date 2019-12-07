@@ -1,7 +1,14 @@
 <div>
 <%= form_tag("/applications", method: :post) do %>
 
-<p><%= label_tag :name %>
+  <% @favorites.each do |favorite|%>
+  <%= label_tag favorite.name %>
+  <%= check_box_tag name="#{favorite.name}", value="#{favorite}"%>
+  <% end %>
+
+
+
+  <p><%= label_tag :name %>
   <%= text_field_tag :name %></p>
 
   <p><%= label_tag :address %>
@@ -19,8 +26,8 @@
   <p><%= label_tag :phone_number %>
   <%= text_field_tag :phone_number %></p>
 
-  <p><%= label_tag :description %>
-  <%= text_field_tag :description %></p>
+  <p><%= label_tag :why_would_you_make_a_good_pet_owner %>
+  <%= text_field_tag :why_would_you_make_a_good_pet_owner %></p>
 
     <%= submit_tag "Apply"%>
 <% end %>
