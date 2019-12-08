@@ -7,7 +7,7 @@ RSpec.describe "The application index page" do
 																							   city: "Denver",
 																							 	 state: "Colorado",
 																							 	 zip: 80230,
-																							 	 phone_number: 1234567890,
+																							 	 phone_number: "1234567890",
 																							 	 why_would_you_make_a_good_pet_owner: "Because why not"
 																							 )
 
@@ -16,7 +16,7 @@ RSpec.describe "The application index page" do
 																							   city: "Denver",
 																							 	 state: "Colorado",
 																							 	 zip: 80230,
-																							 	 phone_number: 1234567890,
+																							 	 phone_number: "1234567890",
 																							 	 why_would_you_make_a_good_pet_owner: "Because why not"
 																							 )
 
@@ -25,7 +25,7 @@ RSpec.describe "The application index page" do
 																							   city: "Denver",
 																							 	 state: "Colorado",
 																							 	 zip: 80230,
-																							 	 phone_number: 1234567890,
+																							 	 phone_number: "1234567890",
 																							 	 why_would_you_make_a_good_pet_owner: "Because why not"
 																							 )
 
