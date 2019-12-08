@@ -16,11 +16,17 @@ RSpec.describe 'On the favorites page' do
                                                 sex:             'Male'
                                                 )
             @jona = @adams_county.pets.create!(image:          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLIxsIlLTscFOas_wsK_VgMOkZ6a8qBCTIJMSBY90VYOyXn08A&s',
-                                            description:     'sassy',
-                                            name:           'Jona',
-                                            approximate_age: 6,
-                                            sex:            'Female'
-                                            )
+                                                description:     'sassy',
+                                                name:           'Jona',
+                                                approximate_age: 6,
+                                                sex:            'Female'
+                                                )
+            @dino = @adams_county.pets.create!(image:          'https://www.stripes.com/polopoly_fs/1.507122.1516212932!/image/image.jpg_gen/derivatives/landscape_900/image.jpg',
+                                                description:     'dinosaur coolness',
+                                                name:           'Dino',
+                                                approximate_age: 2,
+                                                sex:            'Female'
+                                                )
         end
         it 'can fill in application' do
 
@@ -31,6 +37,10 @@ RSpec.describe 'On the favorites page' do
             end
 
             within("#pet-#{@jona.id}") do
+               click_on "Favorite"
+            end
+
+            within("#pet-#{@dino.id}") do
                click_on "Favorite"
             end
 
@@ -53,7 +63,19 @@ RSpec.describe 'On the favorites page' do
 
             click_on 'Apply'
 
+            expect(current_path).to eq('/favorites')
+            expect(page).to_not have_content(@twitch.image)
+            expect(page).to_not have_content(@jona.image)
+            expect(page).to have_content(@dino.name)
+
+            expect(page).to have_content("Application sent for: #{@twitch.name}")
+            expect(page).to have_content("Application sent for: #{@jona.name}")
+
+
             new_application = Application.last
+
+
+            visit '/applications'
 
             expect(current_path).to eq("/applications")
             expect(page).to have_content(new_application.name)
@@ -63,6 +85,7 @@ RSpec.describe 'On the favorites page' do
             expect(page).to have_content(new_application.zip)
             expect(page).to have_content(new_application.phone_number)
             expect(page).to have_content(new_application.why_would_you_make_a_good_pet_owner)
+            
         end
     end
 end
