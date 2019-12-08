@@ -29,12 +29,6 @@ RSpec.describe "The application index page" do
 																							 	 why_would_you_make_a_good_pet_owner: "Because why not"
 																							 )
 
-		@adams_county = Shelter.create!(name: "Adams County Shelter",
-																		address: "6789 Colorado blvd.",
-																		city: "Denver",
-																		state: "Colorado",
-																		zip: 80230
-																	)
 		@ddfl = Shelter.create!(name: "Denver Dumb Friends League",
 																		address: "2345 Rails rd.",
 																		city: "Boulder",
