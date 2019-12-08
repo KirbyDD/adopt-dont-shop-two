@@ -9,14 +9,14 @@ RSpec.describe 'As a visitor' do
                                      state: 'Colorado',
                                      zip: 80230
       )
-      @twitch = adams_county.pets.create(image:           'https://dachshundjournal.com/wp-content/uploads/2018/07/dachshund-1519374_1280-900x681.jpg',
+      @twitch = @adams_county.pets.create(image:           'https://dachshundjournal.com/wp-content/uploads/2018/07/dachshund-1519374_1280-900x681.jpg',
                                         name:            'Twitch',
                                         description:     'Black and Brown colored classic Doxin',
                                         approximate_age:  5,
                                         sex:              'Male',
                                         adoptable:       'Yes'
                                       )
-      @jona = adams_county.pets.create( image:            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLIxsIlLTscFOas_wsK_VgMOkZ6a8qBCTIJMSBY90VYOyXn08A&s',
+      @jona = @adams_county.pets.create( image:            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLIxsIlLTscFOas_wsK_VgMOkZ6a8qBCTIJMSBY90VYOyXn08A&s',
                                         name:            'Jona',
                                         description:     'Black long haird shepard, herding dog',
                                         approximate_age:  6,
@@ -27,7 +27,7 @@ RSpec.describe 'As a visitor' do
 
       visit "/pets/#{@twitch.id}"
 
-      expect(page).to have_css("img[src*='#{twitch.image}']")
+      expect(page).to have_css("img[src*='#{@twitch.image}']")
       expect(page).to have_content(@twitch.name)
       expect(page).to have_content(@twitch.description)
       expect(page).to have_content(@twitch.approximate_age)
