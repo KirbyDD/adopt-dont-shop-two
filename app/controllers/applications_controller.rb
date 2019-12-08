@@ -7,9 +7,15 @@ class ApplicationsController < ApplicationController
 	    end
 	  favorites
 	end
-	
+
 	def index
-		@applications = Application.all
+		if Pet.find(params[:pet_id]).applications.empty?
+			flash[:notice] = "There are currently no applications for this pet."
+		elsif params[:pet_id]
+			@pets = Pet.find(params[:pet_id])
+		else
+			@applications = Application.all
+		end
 	end
 
 	def new
@@ -25,7 +31,7 @@ class ApplicationsController < ApplicationController
 		    end
 	    end
 		redirect_to '/favorites'
-	end 
+	end
 
 	private
 
