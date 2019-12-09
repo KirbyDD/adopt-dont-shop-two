@@ -17,14 +17,18 @@ class ApplicationsController < ApplicationController
 	end
 
 	def create
-		application = Application.create(app_params)
+		application = Application.new(app_params)
 		if application.save
 			favorites.each do |favorite|
 			  flash["#{favorite.name}"] = "Application sent for: #{favorite.name}"
 			  session[:favorites].delete(favorite.id.to_s)
-		    end
+			end
+			redirect_to '/favorites'
+		
+	    else
+		  redirect_to "/applications/new"
+          flash[:error] = 'Application not created: Required information missing.'
 	    end
-		redirect_to '/favorites'
 	end 
 
 	private
