@@ -35,7 +35,7 @@ class PetsController < ApplicationController
       session[:favorites].delete(params[:id].to_s)
     end
     redirect_to "/pets"
-  end 
+  end
 
   def update
     pet = Pet.find(params[:id])

@@ -7,9 +7,15 @@ class ApplicationsController < ApplicationController
 	    end
 	  favorites
 	end
-	
+
 	def index
-		@applications = Application.all
+		if Pet.find(params[:pet_id]).applications.empty?
+			flash[:notice] = "There are currently no applications for this pet."
+		elsif params[:pet_id]
+			@pets = Pet.find(params[:pet_id])
+		else
+			@applications = Application.all
+		end
 	end
 
 	def new
@@ -29,7 +35,8 @@ class ApplicationsController < ApplicationController
 		  redirect_to "/applications/new"
           flash[:error] = 'Application not created: Required information missing.'
 	    end
-	end 
+		redirect_to '/favorites'
+	end
 
 	private
 

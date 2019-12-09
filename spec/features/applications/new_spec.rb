@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'On the favorites page' do
    describe 'as a visitor' do
-        before(:each) do 
+        before(:each) do
             @adams_county = Shelter.create(name:     "Adams County",
                                         address:  "1234 Colorado blvd.",
                                         city:     "Denver",
@@ -47,7 +47,7 @@ RSpec.describe 'On the favorites page' do
             visit '/favorites'
 
             click_on 'Apply for Pets'
-            
+
             expect(current_path).to eq("/applications/new")
 
             check(@twitch.name)
@@ -85,7 +85,7 @@ RSpec.describe 'On the favorites page' do
             expect(page).to have_content(new_application.zip)
             expect(page).to have_content(new_application.phone_number)
             expect(page).to have_content(new_application.why_would_you_make_a_good_pet_owner)
-            
+
         end
         it 'can flash error message when field in form is not filled' do
 
@@ -122,5 +122,3 @@ RSpec.describe 'On the favorites page' do
         end
     end
 end
-
-    
