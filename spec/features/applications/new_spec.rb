@@ -118,9 +118,9 @@ RSpec.describe 'On the favorites page' do
 
            expect(page).to have_content('Application not created: Required information missing.')
            expect(current_path).to eq("/applications/new")
-           expect(page).to have_button('Add New Review')
+           expect(page).to have_button('Apply')
         end
-				
+
         it 'can flash error message when field in form is not filled' do
 
             visit "/shelters/#{@adams_county.id}/pets"

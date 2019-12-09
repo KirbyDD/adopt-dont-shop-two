@@ -2,32 +2,6 @@ require 'rails_helper'
 
 RSpec.describe "The application index page" do
 	it "should display all applications" do
-		@sebastian = Application.create!(name: "Sebastian Sloan",
-																								 address: "123 Fake st.",
-																							   city: "Denver",
-																							 	 state: "Colorado",
-																							 	 zip: 80230,
-																							 	 phone_number: "1234567890",
-																							 	 why_would_you_make_a_good_pet_owner: "Because why not"
-																							 )
-
-		@demarcus = Application.create!( name: "DeMarcus Kirby",
-																								 address: "123 Fake st.",
-																							   city: "Denver",
-																							 	 state: "Colorado",
-																							 	 zip: 80230,
-																							 	 phone_number: "1234567890",
-																							 	 why_would_you_make_a_good_pet_owner: "Because why not"
-																							 )
-
-		@ray = Application.create!(			 name: "Ray Nugyen",
-																								 address: "123 Fake st.",
-																							   city: "Denver",
-																							 	 state: "Colorado",
-																							 	 zip: 80230,
-																							 	 phone_number: "1234567890",
-																							 	 why_would_you_make_a_good_pet_owner: "Because why not"
-																							 )
 
 		@ddfl = Shelter.create!(name: "Denver Dumb Friends League",
 																		address: "2345 Rails rd.",
@@ -78,10 +52,33 @@ RSpec.describe "The application index page" do
 																			 	 sex: "female",
 																			 	 description: "white lab"
 																			 	 )
+																				 @sebastian = @jona.applications.create!(name: "Sebastian Sloan",
+																					 address: "123 Fake st.",
+																					 city: "Denver",
+																					 state: "Colorado",
+																					 zip: 80230,
+																					 phone_number: "1234567890",
+																					 why_would_you_make_a_good_pet_owner: "Because why not"
+																				 )
 
-		@sebastian.pets << @jona
-		@ray.pets << @twitch
-		@ray.pets.push(@ciri)
+																				 @demarcus = @twitch.applications.create!( name: "DeMarcus Kirby",
+																					 address: "123 Fake st.",
+																					 city: "Denver",
+																					 state: "Colorado",
+																					 zip: 80230,
+																					 phone_number: "1234567890",
+																					 why_would_you_make_a_good_pet_owner: "Because why not"
+																				 )
+
+																				 @ray = @twitch.applications.create!(			 name: "Ray Nugyen",
+																					 address: "123 Fake st.",
+																					 city: "Denver",
+																					 state: "Colorado",
+																					 zip: 80230,
+																					 phone_number: "1234567890",
+																					 why_would_you_make_a_good_pet_owner: "Because why not"
+																				 )
+
 
 		visit '/applications'
 
@@ -110,10 +107,6 @@ RSpec.describe "The application index page" do
 
 			within("#pet-#{@twitch.id}") do
 				expect(page).to have_content(@twitch.name)
-			end
-
-			within("#pet-#{@ciri.id}") do
-				expect(page).to have_content(@ciri.name)
 			end
 		end
 	end
