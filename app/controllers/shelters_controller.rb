@@ -17,8 +17,13 @@ class SheltersController < ApplicationController
 
   def create
     shelter = Shelter.new(shelter_params)
-    shelter.save
-    redirect_to '/shelters'
+		if shelter.save
+			flash[:success] = "Shelter Creation Complete!"
+    	redirect_to "/shelters"
+		else
+			flash[:error] = "Shelter not created: Required information missing."
+			redirect_to "/shelters/new"
+		end
   end
 
   def destroy
@@ -31,8 +36,13 @@ class SheltersController < ApplicationController
   def update
     shelter = Shelter.find(params[:id])
     shelter.update(shelter_params)
-    shelter.save
-    redirect_to "/shelters"
+    if shelter.save
+			flash[:success] = "Update Complete!"
+    	redirect_to "/shelters"
+		else
+			flash[:error] = "Shelter not updated: Required information missing."
+			redirect_to "/shelters/#{shelter.id}/edit"
+		end
   end
 
   private

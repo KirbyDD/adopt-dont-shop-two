@@ -27,6 +27,27 @@ RSpec.describe 'New Shelter' do
         expect(page).to have_content('Washington')
         expect(page).to have_content(78436)
       end
+
+			it "can flash error message if shelter field is incomplete" do
+				pet_shelter = Shelter.create(name: 'Pet Shelter', address: '34565 Funville rd.',
+					city: 'Louisville', state: 'Washington', zip: 78436)
+
+				visit '/shelters'
+
+				click_link 'Edit'
+
+				expect(current_path).to eq("/shelters/#{pet_shelter.id}/edit")
+
+				fill_in 'Name', with: 'New Pet Shelter'
+
+				click_on 'Update Shelter'
+
+				expect(page).to have_content("Shelter not updated: Required information missing.")
+				expect(current_path).to eq("/shelters/#{pet_shelter.id}/edit")
+				expect(page).to have_button("Update Shelter")
+			end
+
+
     end
   end
 end

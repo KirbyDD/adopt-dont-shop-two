@@ -22,6 +22,23 @@ on the index' do
       expect(page).to have_content('Denver Dumb Friends League')
 
       end
+
+	it "Can flash error message if form is incomplete" do
+
+			visit '/shelters'
+
+			click_link 'New Shelter'
+
+			expect(current_path).to eq('/shelters/new')
+
+			fill_in 'Name', with: 'Denver Dumb Friends League'
+
+			click_on "Create Shelter"
+
+			expect(page).to have_content("Shelter not created: Required information missing.")
+			expect(current_path).to eq("/shelters/new")
+			expect(page).to have_button("Create Shelter")
+			end
     end
   end
 end
