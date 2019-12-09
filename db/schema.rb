@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20191209191854) do
     t.string "title"
     t.integer "rating"
     t.string "content"
-    t.string "optional_picture"
+    t.string "optional_picture", default: "https://dachshundjournal.com/wp-content/uploads/2018/07/dachshund-1519374_1280-900x681.jpg"
     t.bigint "shelter_id"
     t.index ["shelter_id"], name: "index_reviews_on_shelter_id"
   end
