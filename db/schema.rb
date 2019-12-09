@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191207180932) do
+ActiveRecord::Schema.define(version: 20191209191854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,6 @@ ActiveRecord::Schema.define(version: 20191207180932) do
     t.integer "zip"
     t.string "phone_number"
     t.text "why_would_you_make_a_good_pet_owner"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "pet_applications", force: :cascade do |t|
@@ -51,7 +49,7 @@ ActiveRecord::Schema.define(version: 20191207180932) do
     t.string "title"
     t.integer "rating"
     t.string "content"
-    t.string "optional_picture", default: "https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg"
+    t.string "optional_picture", default: "https://dachshundjournal.com/wp-content/uploads/2018/07/dachshund-1519374_1280-900x681.jpg"
     t.bigint "shelter_id"
     t.index ["shelter_id"], name: "index_reviews_on_shelter_id"
   end

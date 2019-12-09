@@ -9,10 +9,12 @@ class ApplicationsController < ApplicationController
 	end
 
 	def index
-		if Pet.find(params[:pet_id]).applications.empty?
-			flash[:notice] = "There are currently no applications for this pet."
-		elsif params[:pet_id]
-			@pets = Pet.find(params[:pet_id])
+		if params[:pet_id]
+			if Pet.find(params[:pet_id]).applications.empty?
+				flash[:notice] = "There are currently no applications for this pet."
+			else params[:pet_id]
+				@pets = Pet.find(params[:pet_id])
+			end
 		else
 			@applications = Application.all
 		end
@@ -30,12 +32,10 @@ class ApplicationsController < ApplicationController
 			  session[:favorites].delete(favorite.id.to_s)
 			end
 			redirect_to '/favorites'
-		
-	    else
+	  else
 		  redirect_to "/applications/new"
-          flash[:error] = 'Application not created: Required information missing.'
-	    end
-		redirect_to '/favorites'
+        flash[:error] = 'Application not created: Required information missing.'
+	  end
 	end
 
 	private

@@ -106,7 +106,7 @@ RSpec.describe 'On the favorites page' do
            visit '/favorites'
 
            click_on 'Apply for Pets'
-            
+
            expect(current_path).to eq("/applications/new")
 
            fill_in :name, with: 'Ray'
@@ -118,7 +118,41 @@ RSpec.describe 'On the favorites page' do
 
            expect(page).to have_content('Application not created: Required information missing.')
            expect(current_path).to eq("/applications/new")
-           expect(page).to have_button('Add New Review')
+           expect(page).to have_button('Apply')
+        end
+
+        it 'can flash error message when field in form is not filled' do
+
+            visit "/shelters/#{@adams_county.id}/pets"
+
+            within("#pet-#{@twitch.id}") do
+               click_on "Favorite"
+            end
+
+            within("#pet-#{@jona.id}") do
+               click_on "Favorite"
+            end
+
+            within("#pet-#{@dino.id}") do
+               click_on "Favorite"
+            end
+
+           visit '/favorites'
+
+           click_on 'Apply for Pets'
+
+           expect(current_path).to eq("/applications/new")
+
+           fill_in :name, with: 'Ray'
+           fill_in :address, with: '123 Fake St.'
+           fill_in :city, with: 'Denver'
+           fill_in :state, with: 'Colorado'
+
+           click_on 'Apply'
+
+           expect(page).to have_content('Application not created: Required information missing.')
+           expect(current_path).to eq("/applications/new")
+           expect(page).to have_button('Apply')
         end
     end
 end
