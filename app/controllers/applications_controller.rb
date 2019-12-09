@@ -30,12 +30,12 @@ class ApplicationsController < ApplicationController
 			  session[:favorites].delete(favorite.id.to_s)
 			end
 			redirect_to '/favorites'
-		
+
 	    else
 		  redirect_to "/applications/new"
           flash[:error] = 'Application not created: Required information missing.'
 	    end
-		redirect_to '/favorites'
+			# redirect_to '/favorites'
 	end
 
 	private

@@ -35,6 +35,13 @@ RSpec.describe "The application index page" do
 																		state: "Colorado",
 																		zip: 80003
 																	)
+		@adams_county = Shelter.create!(name: 'Adams County',
+																		address: '1234 Colorado blvd.',
+																		city: 'Denver',
+																		state: 'Colorado',
+																		zip: 80230
+																	)
+																	
 		@arvada_pets = Shelter.create!(name: "Arvada Pet Hospital",
 																		address: "4563 Rake st.",
 																		city: "Arvada",
