@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   def favorite_count
      if session[:favorites]
        @count ||= session[:favorites].keys.count
-     else 
+     else
        0
      end
   end
