@@ -1,3 +1,11 @@
+<% if @pets %>
+	<% @pets.applications.each do |application| %>
+	<%= link_to "#{application.name}", "/applications/#{application.id}"%>
+	<% end %>
+<% end %>
+
+<% if @applications %>
+
 <% @applications.each do |application| %>
 	<section id="application-<%= application.id %>">
 		<h1><%= application.name %></h1>
@@ -13,4 +21,5 @@
 			</section>
 		<% end %>
 	</section>
+	<% end %>
 <% end %>
