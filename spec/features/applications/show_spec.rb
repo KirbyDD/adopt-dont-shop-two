@@ -85,7 +85,7 @@ RSpec.describe 'As a visitor' do
 
         visit "/applications/#{@ray.id}"
 
-        expect(current_path).to eq("/applications")
+        expect(current_path).to eq("/applications/#{@ray.id}")
         expect(page).to have_content(@ray.name)
         expect(page).to have_content(@ray.address)
         expect(page).to have_content(@ray.city)
