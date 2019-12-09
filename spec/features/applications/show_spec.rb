@@ -71,7 +71,7 @@ RSpec.describe 'As a visitor' do
             why_would_you_make_a_good_pet_owner: "Because why not"
         )
         
-        @ray = @twitch.applications.create!(name: "Ray Nugyen",
+        @ray = @twitch.applications.create!(name: "Ray Nguyen",
             address: "123 Fake st.",
             city: "Denver",
             state: "Colorado",
@@ -82,7 +82,6 @@ RSpec.describe 'As a visitor' do
     end
     
     it 'only see that application information' do
-    
         visit "/applications/#{@ray.id}"
     
         expect(current_path).to eq("/applications/#{@ray.id}")

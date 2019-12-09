@@ -28,7 +28,8 @@ Rails.application.routes.draw do
   delete '/favorites', to: 'favorites#destroy_all'
   get '/applications', to: 'applications#index'
   get '/applications/new', to: 'applications#new'
+  get '/applications/:application_id', to: 'applications#show'
   post '/applications', to: 'applications#create'
-	get '/applications/:pet_id', to: 'applications#index'
+	get '/applications/pets/:pet_id', to: 'applications#index'
 end
 # yarn installed
