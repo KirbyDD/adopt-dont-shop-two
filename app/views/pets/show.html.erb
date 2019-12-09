@@ -11,4 +11,4 @@
       <%= @pet.adoptable %>! Can I come home with you?</p>
     <p><%= link_to 'Edit', "/pets/#{@pet.id}/edit" %> |
        <%= link_to 'Delete', "/pets/#{@pet.id}", method: :delete %></p> |
-       <%= link_to 'Current Applications', "/applications/#{@pet.id}"%></p>
+       <%= link_to 'Current Applications', "/applications/pets/#{@pet.id}"%></p>

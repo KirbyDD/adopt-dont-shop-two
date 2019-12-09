@@ -66,7 +66,7 @@ RSpec.describe 'As a visitor' do
 
 			click_link "Current Applications"
 
-			expect(current_path).to eq("/applications/#{@jona.id}")
+			expect(current_path).to eq("/applications/pets/#{@jona.id}")
 		end
   end
 end

@@ -20,6 +20,10 @@ class ApplicationsController < ApplicationController
 		end
 	end
 
+	def show
+		@application = Application.find(params[:application_id])
+	end
+
 	def new
 		@favorites = favorites
 	end
