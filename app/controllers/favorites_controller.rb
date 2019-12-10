@@ -30,7 +30,7 @@ class FavoritesController < ApplicationController
 	end
 
 	def destroy_all
-		session[:favorites] = Hash.new(0) 
+		session[:favorites] = Hash.new(0)
 		redirect_to "/favorites"
 	end
 end
