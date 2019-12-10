@@ -29,17 +29,33 @@ class ApplicationsController < ApplicationController
 	end
 
 	def create
-		application = Application.new(app_params)
-		if application.save
-			favorites.each do |favorite|
-			  flash["#{favorite.name}"] = "Application sent for: #{favorite.name}"
-			  session[:favorites].delete(favorite.id.to_s)
+		# binding.pry
+		app_pets = []
+		keys = params.keys
+		keys.each do |key|
+			if key.include?("pet-")
+				pet = Pet.find(params[key])
+				app_pets << pet
 			end
-			redirect_to '/favorites'
-	  else
+		end
+		if app_pets.count == 0
+			flash[:error] = 'Application not created: Required information missing.'
 		  redirect_to "/applications/new"
+		end
+		app_pets.each do |pet|
+			pet.applications.create(app_params)
+			# application = Application.new(app_params)
+			if pet.applications
+					flash["#{pet.name}"] = "Application sent for: #{pet.name}"
+					session[:favorites].delete(pet.id.to_s)
+				if pet == app_pets.last
+					redirect_to '/favorites'
+				end
+			else
         flash[:error] = 'Application not created: Required information missing.'
-	  end
+		  	redirect_to "/applications/new"
+			end
+		end
 	end
 
 	private

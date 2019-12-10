@@ -50,8 +50,8 @@ RSpec.describe 'On the favorites page' do
 
             expect(current_path).to eq("/applications/new")
 
-            check(@twitch.name)
-            check(@jona.name)
+            check("pet-#{@twitch.name}")
+            check("pet-#{@jona.name}")
 
             fill_in :name, with: 'Ray'
             fill_in :address, with: '123 Fake St.'
