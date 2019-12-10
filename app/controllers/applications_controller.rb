@@ -43,8 +43,8 @@ class ApplicationsController < ApplicationController
 		  redirect_to "/applications/new"
 		end
 		app_pets.each do |pet|
-			pet.applications.create(app_params)
-			# application = Application.new(app_params)
+				pet.applications.create(app_params)
+				
 			if pet.applications
 					flash["#{pet.name}"] = "Application sent for: #{pet.name}"
 					session[:favorites].delete(pet.id.to_s)
