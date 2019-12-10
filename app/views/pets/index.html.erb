@@ -14,7 +14,7 @@
     <p>approximate_age: <%= pet.approximate_age %></p>
     <p>sex: <%= pet.sex %></p>
     <p>Shelter Name: <%= pet.shelter.name %>
-    <p>Adoptable: <%= pet.adoptable = "Currently Adoptable" %></p>
+    <p>Adoptable: <%= pet.adoptable %></p>
     <p><%= link_to 'Edit', "/pets/#{pet.id}/edit" %> |
     <%= link_to 'Delete', "/pets/#{pet.id}", method: :delete %></p>
     </section>
@@ -29,9 +29,9 @@
 </header>
 
 
-<main>
+<main class='pet-container'>
   <% @pets.each do |pet| %>
-		<section id= "pet-<%= pet.id %>">
+		<section id= "pet-<%= pet.id %>" class='pet'>
 				<%= button_to 'Favorite', "/favorites/#{pet.id}", method: :patch %>
 	    	<p><img src= <%= pet.image %> width="200" height="162"></p>
 	    	<p>name: <%= link_to "#{pet.name}", "/pets/#{pet.id}" %></p>

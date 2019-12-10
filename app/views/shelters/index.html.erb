@@ -8,8 +8,9 @@
   </head>
 
   <body>
-    <div>
+    <div class='shelters'>
       <% @shelters.each do |shelter| %>
+      <section class='shelter'>
       <h2 id="shelterName"><%= link_to "#{shelter.name}", "/shelters/#{shelter.id}" %></h2>
       <h3><%= shelter.address %>
           <%= shelter.city %>
@@ -17,6 +18,7 @@
           <%= shelter.zip %></h3>
       <h5 class="edit Buttons"><%= link_to 'Edit', "/shelters/#{shelter.id}/edit" %> |
       <%= link_to 'Delete', "/shelters/#{shelter.id}", method: :delete %></h5>
+      </section>
       <%end%>
     </div>
 

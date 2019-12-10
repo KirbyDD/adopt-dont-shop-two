@@ -1,8 +1,14 @@
 body {
+  color: white;
   margin: 0px;
 }
 
 h1 {
+  color: gold;
+  text-shadow: 8px 8px 7px black;
+}
+
+h2 {
   color: gold;
   text-shadow: 8px 8px 7px black;
 }
@@ -16,20 +22,30 @@ p {
   color: white;
 }
 
+.banner-container {
+  display: flex;
+  height: 215px;
+  padding: 0px;
+}
+
 #banner{
+  align-items: center;
   background-color: royalblue;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: white;
+  height: 215px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 header {
   /* background-color: white; */
-  vertical-align: middle;
-  text-align: center;
   position: top;
-  top: 1px;
+  text-align: center;
+  top: 0px;
+  vertical-align: middle;
 }
 
 .banner-title {
@@ -39,9 +55,9 @@ header {
 }
 
 nav {
+  bottom: 1px;
   display: flex;
   justify-content: space-around;
-  bottom: 1px;
   width: 100%;
 }
 
@@ -50,16 +66,15 @@ nav {
   border-width: 2px;
   border-color: black;
   box-shadow: 8px 8px 7px black;
-  height: 55px;
+  height: 65px;
   margin: 15px;
-  width: 130px;
-
+  width: 140px;
 }
 
 .nav-btn a {
-  text-decoration: none;
   color: gold;
   font-size: 26px;
+  text-decoration: none;
 }
 
 #shelterName {
@@ -67,14 +82,65 @@ nav {
 }
 
 .background-img {
-  position: fixed;
-  filter: brightness(40%);
-  z-index: -1;
   background-size: cover;
-  width: 100%;
+  filter: brightness(30%);
   height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
 }
 
+.pet-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pet {
+  border: solid;
+  border-radius: 6px;
+}
+
+.shelters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.shelter {
+  display: flex;
+  flex-direction: column;
+}
+
+.favs-section {
+  color: white;
+  text-align: center;
+}
+
+.favs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.fav {
+  border: solid;
+  border-color: black;
+  border-radius: 5px;
+}
+
+.with-app {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.solo-pet {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
 
 div {
   /* background: #ddd; */
@@ -92,11 +158,11 @@ div:nth-of-type(odd) {
   text-align: middle;
 }
 
-#sheltersAddress {
+/* #sheltersAddress {
   hieght: 100%;
   position: top;
   top: 10px;
-}
+} */
 
 section {
   text-align: center;
