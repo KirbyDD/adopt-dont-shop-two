@@ -28,8 +28,13 @@ class SheltersController < ApplicationController
 
   def destroy
     shelter = Shelter.find(params[:id])
-    shelter.destroy
-    redirect_to '/shelters'
+    if approved_pets(shelter)
+      flash[:error] = "Shelter not deleted: Shelter has pet currently approved for adoption."
+      redirect_to "/shelters/#{shelter.id}"
+    else
+      shelter.destroy
+      redirect_to '/shelters'
+    end
   end
 
 
@@ -50,4 +55,13 @@ class SheltersController < ApplicationController
     params.permit(:name, :address, :city, :state, :zip)
   end
 
+  def approved_pets(shelter)
+    check = false
+    shelter.pets.each do |pet|
+      if pet.adoptable == 'pending'
+        check = true
+      end
+    end
+    check
+  end
 end
