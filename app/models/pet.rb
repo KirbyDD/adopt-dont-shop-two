@@ -4,11 +4,12 @@ class Pet < ApplicationRecord
 
   belongs_to :shelter
 	has_many :pet_applications
-	has_many :applications, through: :pet_applications 
+	has_many :applications, through: :pet_applications
 
   def self.count_of_pets
     count
   end
+
   def self.pets_with_apps
     joins(:applications).uniq
   end
