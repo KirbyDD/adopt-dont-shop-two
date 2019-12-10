@@ -1,27 +1,29 @@
-<h2>List of Favorited Animals</h2>
 <% if @favorites.count > 0 %>
 
-<main>
+<main class="favs-section">
+  <h2>List of Favorited Animals</h2>
   <%= button_to 'Apply for Pets', '/applications/new', method: :get %>
   <%= button_to 'Remove All Pets', '/favorites', method: :delete %>
+  <article class='favs'>
   <% @favorites.each do |fav| %>
-   <section id="pet-<%= fav.id %>">
+   <section id="pet-<%= fav.id %>" class="fav">
       <%= button_to  'Unfavorite Pet', "/favorites/#{fav.id}", method: :delete %>
       <h3><%= link_to "#{fav.name}", "/pets/#{fav.id}" %></h3>
       <img src= <%= fav.image %> width="200" height="162">
     </section>
   <% end %>
+  </article>
 </main>
 
 <% else %>
-
-<h2>You do not have any favorites. Please go to a shelter and add pets to your favorites.</h2>
-
+<main class="favs-section">
+  <h2>You do not have any favorites. Please go to a shelter and add pets to your favorites.</h2>
+</main>
 <% end %>
 
-<h2>List of Pets with Applications</h2>
 
-<article>
+<article class='with-app'>
+  <h2>List of Pets with Applications</h2>
   <% @pets.each do |pet| %>
   <section id="app-<%= pet.id %>">
     <h3><%= link_to "#{pet.name}", "/pets/#{pet.id}" %></h3>
