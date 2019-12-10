@@ -12,7 +12,7 @@ RSpec.describe 'As a visitor' do
                                    approximate_age: 5,
                                    sex: 'Male',
                                    description: 'Small Black and Brown doxin',
-                                   adoptable: true
+                                   adoptable: 'yes'
                                  )
 
    visit '/pets'
