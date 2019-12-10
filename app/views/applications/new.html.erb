@@ -3,7 +3,7 @@
 
   <% @favorites.each do |favorite|%>
   <%= label_tag favorite.name %>
-  <%= check_box_tag name="#{favorite.name}", value="#{favorite}"%>
+  <%= check_box_tag name="pet-#{favorite.name}",  value="#{favorite.id}" %>
   <% end %>
 
 
@@ -29,6 +29,6 @@
   <p><%= label_tag :why_would_you_make_a_good_pet_owner %>
   <%= text_field_tag :why_would_you_make_a_good_pet_owner %></p>
 
-    <%= submit_tag "Apply"%>
+  <%= submit_tag "Apply"%>
 <% end %>
 </div>

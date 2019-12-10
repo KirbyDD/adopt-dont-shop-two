@@ -18,3 +18,13 @@
 <h2>You do not have any favorites. Please go to a shelter and add pets to your favorites.</h2>
 
 <% end %>
+
+<h2>List of Pets with Applications</h2>
+
+<article>
+  <% @pets.each do |pet| %>
+  <section id="app-<%= pet.id %>">
+    <h3><%= link_to "#{pet.name}", "/pets/#{pet.id}" %></h3>
+  </section>
+  <% end %>
+</article>
