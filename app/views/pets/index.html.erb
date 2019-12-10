@@ -37,7 +37,7 @@
 	    	<p>name: <%= link_to "#{pet.name}", "/pets/#{pet.id}" %></p>
 	    	<p>approximate_age: <%= pet.approximate_age %></p>
 	    	<p>sex: <%= pet.sex %></p>
-	    	<p>Adoptable: <%= pet.adoptable = "Currently Adoptable" %></p>
+	    	<p>Adoptable: <%= pet.adoptable %></p>
 	    	<p><%= link_to 'Edit', "/pets/#{pet.id}/edit" %> |
 	    	<%= link_to 'Delete', "/pets/#{pet.id}", method: :delete %></p>
 		</section>

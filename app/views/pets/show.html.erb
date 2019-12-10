@@ -1,4 +1,12 @@
 <img src= <%= @pet.image %> width="200" height="162" />
+
+<% @pet.applications.each do |applicant| %>
+
+<%if @pet.adoptable == "pending"%>
+<h1> On hold for <%= applicant.name %></h1>
+<% end %>
+<% end %>
+
     <p>Hello My name is
       <%= @pet.name %></p>
     <p>Here is a little more about me:
@@ -7,8 +15,11 @@
        <%= @pet.approximate_age %> years old</p>
     <p>The doctors say I am a
         <%= @pet.sex %> Whatever that means</p>
-    <p>And the answer to "if I am adoptable" is
-      <%= @pet.adoptable %>! Can I come home with you?</p>
+    <p>And the answer to "if I am adoptable" is 
+      <%= @pet.adoptable %>! Can I come home with you?</p> 
+      
     <p><%= link_to 'Edit', "/pets/#{@pet.id}/edit" %> |
        <%= link_to 'Delete', "/pets/#{@pet.id}", method: :delete %></p> |
        <%= link_to 'Current Applications', "/applications/pets/#{@pet.id}"%></p>
+
+     

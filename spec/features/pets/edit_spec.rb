@@ -38,7 +38,7 @@ RSpec.describe 'New Pet' do
         expect(page).to have_content(8)
         expect(page).to have_content("Male")
         expect(page).to have_content("Funny")
-        expect(page).to have_content(true)
+        
       end
     end
   end
