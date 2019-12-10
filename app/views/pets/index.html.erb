@@ -29,9 +29,9 @@
 </header>
 
 
-<main>
+<main class='pet-container'>
   <% @pets.each do |pet| %>
-		<section id= "pet-<%= pet.id %>">
+		<section id= "pet-<%= pet.id %>" class='pet'>
 				<%= button_to 'Favorite', "/favorites/#{pet.id}", method: :patch %>
 	    	<p><img src= <%= pet.image %> width="200" height="162"></p>
 	    	<p>name: <%= link_to "#{pet.name}", "/pets/#{pet.id}" %></p>
