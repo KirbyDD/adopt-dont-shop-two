@@ -10,6 +10,15 @@ class Pet < ApplicationRecord
     count
   end
 
+	def self.amount_of_apps
+		amount = 0
+		self.count do |pet|
+			amount += pet.applications.count
+		end
+		amount
+	end
+
+
   def self.pets_with_apps
     joins(:applications).uniq
   end
