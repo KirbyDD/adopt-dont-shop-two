@@ -24,9 +24,9 @@ maggie = arvada_shelters.pets.create(image: "https://render.fineartamerica.com/i
 #
 #Applications
 
-sebastian = Applications.create(name: "Sebastian Sloan", address: "123 Fake st.", city: "Denver", state: "Colorado", zip: 80230, phone_number: "1234567890", why_would_you_make_a_good_pet_owner: "Because why not")
-demarcus = Applications.create(name: "DeMarcus Kirby", address: "123 Fake st.", city: "Denver", state: "Colorado", zip: 80230, phone_number: "1234567890", why_would_you_make_a_good_pet_owner: "Because why not")
-ray = Applications.create(name: "Ray Nguyen", address: "123 Fake st.", city: "Denver", state: "Colorado", zip: 80230, phone_number: "1234567890", why_would_you_make_a_good_pet_owner: "Because why not")
+sebastian = Application.create(name: "Sebastian Sloan", address: "123 Fake st.", city: "Denver", state: "Colorado", zip: 80230, phone_number: "1234567890", why_would_you_make_a_good_pet_owner: "Because why not")
+demarcus = Application.create(name: "DeMarcus Kirby", address: "123 Fake st.", city: "Denver", state: "Colorado", zip: 80230, phone_number: "1234567890", why_would_you_make_a_good_pet_owner: "Because why not")
+ray = Application.create(name: "Ray Nguyen", address: "123 Fake st.", city: "Denver", state: "Colorado", zip: 80230, phone_number: "1234567890", why_would_you_make_a_good_pet_owner: "Because why not")
 fredo = Application.create(name: "Alfredo Ferradas", address: "123 Fake st.", city: "Denver", state: "Colorado", zip: 80230, phone_number: "1234567890", why_would_you_make_a_good_pet_owner: "Because why not")
 
 
@@ -37,4 +37,3 @@ PetApplication.create(pet: maggie, application: ray)
 PetApplication.create(pet: jona, application: ray)
 PetApplication.create(pet: jona, application: demarcus)
 PetApplication.create(pet: twitch, application: sebastian)
-
