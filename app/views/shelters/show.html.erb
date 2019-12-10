@@ -2,6 +2,9 @@
 <html>
   <header>
     <h2><%= @shelter.name %></h2>
+		<p>Number of Pets in this Shelter: <%= @shelter.pets.count_of_pets %>
+		<p>Number of Applications in this Shelter: <%= @shelter.pets.amount_of_apps %>
+		<p>Average Shelter Review Rating: <%= @shelter.reviews.average(:rating) %>
   </header>
   
   <div id="sheltersAddress">
