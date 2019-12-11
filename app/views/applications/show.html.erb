@@ -9,7 +9,10 @@
 		<p> Why: <%= @application.why_would_you_make_a_good_pet_owner %> <br> </p>
 
 		<% @application.pets.each do |pet|%>
-			<p>Pets Name: <%= pet.name%> </p>
-			  <%= button_to 'Approve', "/pets/approval/#{pet.id}", method: :patch %>
+			<% if pet.adoptable == 'pending' %>
+			<% else %>
+				<p>Pets Name: <%= pet.name%> </p>
+			  <%= button_to 'Approve', "/pets/approval/#{pet.id}/#{@application.name.gsub(' ', '_')}", method: :patch %>
+				<%end%>
 		<%end%>
 		

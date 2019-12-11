@@ -49,10 +49,12 @@ class PetsController < ApplicationController
     pet.save
     redirect_to "/pets/#{pet.id}"
   end
-
+  
   def approval
+    person = params[:applicant_name]
     pet = Pet.find(params[:pet_id])
     pet[:adoptable] = "pending"
+    pet[:applicants] = person
     pet.update(pet_params)
     pet.save
     redirect_to "/pets/#{pet.id}"
