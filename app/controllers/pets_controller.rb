@@ -30,11 +30,17 @@ class PetsController < ApplicationController
 
   def destroy
     pet = Pet.find(params[:id])
+    if pet[:adoptable] == "pending"
+      flash[:notice] = "Pet is pending"
+      redirect_to "/pets/#{pet.id}"
+    else
     pet.destroy
+    redirect_to "/pets"
+    end
     if session[:favorites]
       session[:favorites].delete(params[:id].to_s)
+      redirect_to "/pets"
     end
-    redirect_to "/pets"
   end
 
   def update
