@@ -29,9 +29,9 @@ class ApplicationsController < ApplicationController
 	end
 
 	def create
-		# binding.pry
 		app_pets = []
 		keys = params.keys
+		new_app = nil;
 		keys.each do |key|
 			if key.include?("pet-")
 				pet = Pet.find(params[key])
@@ -43,7 +43,11 @@ class ApplicationsController < ApplicationController
 		  redirect_to "/applications/new"
 		end
 		app_pets.each do |pet|
-				pet.applications.create(app_params)
+			if pet == app_pets.first
+				new_app = pet.applications.create(app_params)
+			else
+				new_app.pets << pet
+			end
 				
 			if pet.applications
 					flash["#{pet.name}"] = "Application sent for: #{pet.name}"
