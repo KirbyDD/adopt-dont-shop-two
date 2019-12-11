@@ -42,6 +42,7 @@ class PetsController < ApplicationController
       redirect_to "/pets"
     end
   end
+  end
 
   def update
     pet = Pet.find(params[:id])

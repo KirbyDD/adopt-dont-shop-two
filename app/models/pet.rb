@@ -3,7 +3,7 @@ class Pet < ApplicationRecord
   validates_inclusion_of :sex, in: ['male', 'female', 'Male', 'Female']
 
   belongs_to :shelter
-	has_many :pet_applications
+	has_many :pet_applications, dependent: :delete_all
 	has_many :applications, through: :pet_applications
 
   def self.count_of_pets
