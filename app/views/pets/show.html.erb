@@ -1,11 +1,8 @@
 <main class='solo-pet'>
 <img src= <%= @pet.image %> width="200" height="162" />
 
-<% @pet.applications.each do |applicant| %>
-
 <%if @pet.adoptable == "pending"%>
-<h1> On hold for <%= applicant.name %></h1>
-<% end %>
+<h1> On hold for <%= @pet.applicants.gsub('_', ' ') %></h1>
 <% end %>
 
     <p>Hello My name is
